@@ -1,5 +1,5 @@
 import React from 'react'
-import Player from './Player'
+import Player from '../components/Player'
 
 const Answer = (props) => {
 	const answerSty = {}

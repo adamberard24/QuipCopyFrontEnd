@@ -47,7 +47,7 @@ class Game extends Component {
 		prompt: undefined,
 		has_ended: false,
 		best_answer: undefined,
-		// isMuted: false
+		isMuted: false
 	}
 	state = this.defaultState
 
@@ -86,7 +86,7 @@ class Game extends Component {
 			this.music = new Audio('audio/sans_theme.mp3')
 			this.music.loop = true
 			this.music.volume = 0.4
-			this.music.play()
+			// this.music.play()
 		}
 	}
 
@@ -240,18 +240,18 @@ class Game extends Component {
 		})
 	}
 
-	// handleToggleMute = () => {
-	// 	const newVal = !this.state.isMuted
-	// 	this.setState({ isMuted: newVal })
+	handleToggleMute = () => {
+		const newVal = !this.state.isMuted
+		this.setState({ isMuted: newVal })
 
-	// 	if (!this.isMobile) {
-	// 		if (!newVal) {
-	// 			this.music.play()
-	// 		} else {
-	// 			this.music.pause()
-	// 		}
-	// 	}
-	// }
+		if (!this.isMobile) {
+			if (!newVal) {
+				this.music.play()
+			} else {
+				this.music.pause()
+			}
+		}
+	}
 
 	// Reset everything and go back to home
 	handleBackToMainMenu = () => {
@@ -285,7 +285,7 @@ class Game extends Component {
 			answers,
 			votes,
 			prompt,
-			// isMuted,
+			isMuted,
 			best_answer,
 			timer
 		} = this.state
@@ -301,7 +301,7 @@ class Game extends Component {
 			GameComponent = (
 				<React.Fragment>
 					<div className='loader'>
-						🤔<br />
+						<br />
 					</div>
 					<p>Loading Scoreboard...</p>
 				</React.Fragment>
@@ -334,7 +334,7 @@ class Game extends Component {
 				GameComponent = (
 					<React.Fragment>
 						<div className='loader'>
-							🤔<br />
+							<br />
 						</div>
 						<p>Loading Rounds...</p>
 					</React.Fragment>
@@ -365,18 +365,18 @@ class Game extends Component {
 					prompt={prompt}
 					player_prompts={player_prompts}
 					is_voting_phase={is_voting_phase}
-					// isMuted={isMuted || this.isMobile}
+					isMuted={isMuted || this.isMobile}
 				/>
 			)
 		}
 
 		return (
 			<div className='game'>
-				{/* {!this.isMobile && (
+				{!this.isMobile && (
 					<span onClick={this.handleToggleMute} className='mute'>
 						{isMuted ? '🔇' : '🔉'}
 					</span>
-				)} */}
+				)}
 				<h1>{this.state.timer > 0 && (!hasGameEndedOnClientBeforeServer && !has_ended) && this.state.timer}</h1>
 				<br />
 				{GameComponent}

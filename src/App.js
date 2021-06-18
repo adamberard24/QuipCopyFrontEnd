@@ -51,11 +51,11 @@ class App extends Component {
 	}
 
 	// Randomize the emojis for more fun
-	// renderQuipCopy = () => {
-		// let emojis = []
-		// for (let i = 0; i < 10; i++) {
-		// 	emojis.push([][Math.floor(Math.random() * 5)])
-		// }
+	// renderSpitWits = () => {
+	// 	let emojis = []
+	// 	for (let i = 0; i < 10; i++) {
+	// 		emojis.push([ '🧠', '🧠', '💦', '🤔', '🤔' ][Math.floor(Math.random() * 5)])
+	// 	}
 
 	// 	return (
 	// 		<div className='area'>
@@ -73,12 +73,12 @@ class App extends Component {
 
 		return (
 			<div className='App'>
+				{/* {this.renderSpitWits()} */}
 				{game ? (
 					<Game game={game} is_host={is_host} apiUrl={this.API_URL} resetGame={this.resetGame} />
 				) : (
 					<div>
-						<h1 className='heading'>Quip Copy Cat
-          </h1>
+						<h1 className='heading'>Adam's CopyCat</h1>
 						<NewGameForm
 							handleEnterGame={this.handleEnterGame}
 							handleCreateNewGame={this.handleCreateNewGame}
@@ -97,51 +97,3 @@ class App extends Component {
 }
 
 export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import logo from '../logo.svg';
-// import '../App.css';
-// import {Switch, Route, BrowserRouter} from "react-router-dom";
-// import Signup from "./Components/Signup";
-// import Login from "./Components/Login";
-
-
-
-// function App() {
-
-//   function logOut(){
-
-//     localStorage.clear()
-//   }
-//   return (
-    
-//     <div className="App">
-//       HOME PAGE
-//       <Switch>
-//         <Route path="/signup">
-//           <Signup />
-//         </Route>
-//         <Route path="/login">
-//           <Login />
-//         </Route>
-//       </Switch>
-//       <button onClick={() => logOut()}>Logout</button>
-//     </div>
-//   )
-// }
-
-// export default App;
