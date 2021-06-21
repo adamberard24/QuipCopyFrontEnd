@@ -16,23 +16,23 @@ class Round extends Component {
 
 		// Fetching voices is async so we check until we get it
 		var timer = setInterval(() => {
-			var voices = speechSynthesis.getVoices()
+			// var voices = speechSynthesis.getVoices()
 
-			if (voices.length !== 0) {
-				const msg = new SpeechSynthesisUtterance()
-				msg.volume = 0.5
-				let voice = voices.find((voice) => voice.lang.includes('en-GB')) || voices[7]
-				msg.voice = voice // British voice for authenticity
+			// if (voices.length !== 0) {
+			// 	const msg = new SpeechSynthesisUtterance()
+			// 	// msg.volume = 0.5
+			// 	// let voice = voices.find((voice) => voice.lang.includes('en-GB')) || voices[7]
+			// 	// msg.voice = voice // British voice for authenticity
 
-				let text = prompt.question + '...'
-				text += answers[0] ? answers[0].text.replace('[AUTOFILL] ', '') : '<NO ANSWER>'
-				text += answers[1] ? '<OR>' + answers[1].text.replace('[AUTOFILL] ', '') : '<OR> <NO ANSWER>'
-				msg.text = text
+			// 	let text = prompt.question + '...'
+			// 	text += answers[0] ? answers[0].text.replace('[AUTOFILL] ', '') : '<NO ANSWER>'
+			// 	text += answers[1] ? '<OR>' + answers[1].text.replace('[AUTOFILL] ', '') : '<OR> <NO ANSWER>'
+			// 	msg.text = text
 
-				speechSynthesis.speak(msg)
+			// 	speechSynthesis.speak(msg)
 
-				clearInterval(timer)
-			}
+			// 	clearInterval(timer)
+			// }
 		}, 200)
 	}
 

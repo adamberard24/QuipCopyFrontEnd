@@ -372,11 +372,7 @@ class Game extends Component {
 
 		return (
 			<div className='game'>
-				{!this.isMobile && (
-					<span onClick={this.handleToggleMute} className='mute'>
-						{isMuted ? '🔇' : '🔉'}
-					</span>
-				)}
+				
 				<h1>{this.state.timer > 0 && (!hasGameEndedOnClientBeforeServer && !has_ended) && this.state.timer}</h1>
 				<br />
 				{GameComponent}

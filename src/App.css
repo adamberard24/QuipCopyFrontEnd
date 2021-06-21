@@ -24,13 +24,39 @@
 	}
 }*/
 
+@keyframes title-move-in {
+	from {
+		transform: translateY(-500px);
+	}
+	to {
+		transform: translatey(0px);
+	}}
+
+	@keyframes logo-move-in {
+		from {
+			transform: translateY(500px);
+		}
+		to {
+			transform: translatey(0px);
+		}}
+
+		.logo {
+			animation-duration: 3s;
+			animation-name: logo-move-in;
+
+		}
+
 .heading {
+
+	
 	margin-top: 10%;
 	font-size: 5em;
 	font-family: 'Press Start 2P', cursive;
 	-webkit-text-stroke: 3px black;
 	color: rgb(0, 0, 0);
 	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	animation-duration: 3s;
+	animation-name: title-move-in;
 }
 
 button:hover {
@@ -153,31 +179,31 @@ td {
 }
 
 .orange {
-	background-color: #f96714;
+	background-color: #9b1b30;
 }
 
 .yellow {
-	background-color: #ca9b00;
+	background-color: #9b1b30;
 }
 
 .green {
-	background-color: #264e36;
+	background-color: #9b1b30;
 }
 
 .teal {
-	background-color: #00a591;
+	background-color: #9b1b30;
 }
 
 .blue {
-	background-color: #00539c;
+	background-color: #9b1b30;
 }
 
 .purple {
-	background-color: #6b5b95;
+	background-color: #9b1b30;
 }
 
 .pink {
-	background-color: #ce3175;
+	background-color: #9b1b30;
 }
 
 /* ===================== ANSWER ========================= */
@@ -186,7 +212,7 @@ td {
 	margin: 3em;
 	padding: 0 1em 0 1em;
 	border: 2px solid black;
-	background-color: black;
+	background-color: rgb(255, 255, 255);
 }
 
 .answer.votable:hover {
@@ -254,7 +280,7 @@ td {
 } 
 
 /* ============================== FOR FLOATING BRAIN AND SPLURT EMOJIS ============================= */
-/* .area {
+.area {
 	background-image: linear-gradient(90deg, #380d05 0%, #5f170c 25%, #6b1c0f 50%, #61160a 75%, #360a04 100%);
 	width: 100%;
 	height: 100%;
@@ -262,7 +288,7 @@ td {
 	z-index: -1;
 }
 
-.circles {
+/*.circles {
 	position: absolute;
 	top: 0;
 	left: 0;

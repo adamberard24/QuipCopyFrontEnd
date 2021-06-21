@@ -32,7 +32,7 @@ class AnswerForm extends Component {
 								disabled={this.state[`answer${i + 1}`]}
 								handleSubmit={this.handleSubmit}
 								placeholder={'enter answer'}
-								submitOnTimerEnd
+								submitOnTimerEnd={true}
 							/>
 							<br />
 						</React.Fragment>

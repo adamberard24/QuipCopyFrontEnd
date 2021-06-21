@@ -78,7 +78,7 @@ class App extends Component {
 					<Game game={game} is_host={is_host} apiUrl={this.API_URL} resetGame={this.resetGame} />
 				) : (
 					<div>
-						<h1 className='heading'>Adam's CopyCat</h1>
+						<h1 className='heading'>Quiplash, but it's not</h1>
 						<NewGameForm
 							handleEnterGame={this.handleEnterGame}
 							handleCreateNewGame={this.handleCreateNewGame}
@@ -89,6 +89,7 @@ class App extends Component {
 							{isLoading && <small>Loading...</small>}
 							{message && <small>Loading...</small>}
 						</div>
+						<img className='logo' src='http://localhost:3000/poop.png' />
 					</div>
 				)}
 			</div>
